@@ -1,62 +1,45 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: Finding
+description: Report a pentest finding / vulnerability
+title: "[Finding]: "
+labels: ["finding"]
+assignees: []
 body:
-  - type: markdown
+  - type: textarea
+    id: description
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      label: Description
+      description: A short summary of the issue.
+  - type: textarea
+    id: technicalDescription
+    attributes:
+      label: Technical Description
+      description: Technical Description of the finding and supporting materials like steps to reproduce.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What is the impact of the vulnerability?
+      placeholder: An adversary can ...
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: What severity does the vulnerability have towards the threat model?
+      options:
+        - Low
+        - Moderate
+        - Elevated
+        - High
+        - Extreme
+    validations:
+      required: true
   - type: input
-    id: contact
+    id: type
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Vulnerability Type
+      description: What is the finding type or [CWE](https://cwe.mitre.org/)?
+      placeholder: ex. Remote Code Execution
     validations:
       required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
