@@ -1,7 +1,7 @@
 name: Non-Finding
 description: Report a non-finding
 title: "[Non-Finding]: "
-labels: ["non-finding"]
+labels: ["Non-Finding"]
 assignees: []
 body:
   - type: textarea

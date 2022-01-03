@@ -1,7 +1,7 @@
 name: Finding
 description: Report a pentest finding / vulnerability
 title: "[Finding]: "
-labels: ["finding"]
+labels: ["Finding"]
 assignees: []
 body:
   - type: textarea
