@@ -1,0 +1,20 @@
+name: Non-Finding
+description: Report a non-finding
+title: "[Non-Finding]: "
+labels: ["non-finding"]
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of the Non-Finding and supporting materials like steps to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: supportingMaterials
+    attributes:
+      label: Additional Supporting Materials
+      description: What other information was considered to file the non-finding?
+    validations:
+      required: true
