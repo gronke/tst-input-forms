@@ -1,0 +1,12 @@
+name: Future-Work
+description: Recommend Future Work
+title: "[Future Work]: "
+labels: ["Future Work"]
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
